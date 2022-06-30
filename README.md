@@ -1,24 +1,61 @@
-# README
+# Local Business Lookup
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+An API created to search for local restaurants and shops.
 
-Things you may want to cover:
+## By Deya Card
 
-* Ruby version
+## Technologies used:
+* Ruby
+* Rails
+* Gemfile
+* Active Record
+* Faker
+* FactoryBot
+* RSpec
 
-* System dependencies
 
-* Configuration
 
-* Database creation
+## Setup/Installation Requirements:
+* Clone or download this repository onto your desktop: https://github.com/DeyaCard/local_business_lookup_api
+* Navigate to top-level of directory
+* Open code editing software, such as VS Code
+* run bundle install in the terminal
+* run rake db:create
+* run rake db:test:prepare
+* run rake db:migrate
+* run rake db:seed
+* run rails s
+* In your browser of choice, navigate to localhost:3000
+* Enjoy!
 
-* Database initialization
+## API Endpoints
 
-* How to run the test suite
+| Method       | URL | Result |
+| :--- |:---| :---|
+|GET| `localhost:3000/`| Returns a list of all quotes in the database|
+|GET | `localhost:3000/quotes`| Returns a list of all quotes in the database|
+|GET | `localhost:3000/quotes/38`| Returns all information related to quote with ID=38|
+|GET | `http://localhost:3000/quotes/search/?author=Abraham Lincoln`| Returns all quotes in database where author is Abraham Lincoln|
+|GET | `http://localhost:3000/quotes/search/?content=Four score...` | Returns quote with content "Four score..."|
+|GET|`http://localhost:3000/quotes/random`|Returns a random quote from the database|
+|POST|`http://localhost:3000/quotes/?author=Abraham Lincoln&content=Four score...`|Adds quote to database. Author:Abraham Lincoln, Content: "Four score...". If POST is succesfull, returns database object for newly created quote.|
+|PUT/PATCH|`http://localhost:3000/quotes/38?author=Joe Biden`|Updates the author for a quote with ID=38. If PUT/PATCH is succesfull, returns database object for newly updated quote.|
+|DELETE|`http://localhost:3000/quotes/38`|Deletes the quote with ID=38 from database|
 
-* Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
+## Known Bugs:
+* No known bugs. Please report issues to thedeyacard@gmail.com
 
-* ...
+
+## License: 
+* MIT
+
+Copyright (c) 2022 Deya Card
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+
