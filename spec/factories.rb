@@ -1,6 +1,7 @@
 FactoryBot.define do
   factory(:business) do
-    restaurant {Faker::Restaurant.name}
-    shop {Faker::Shop.name}
+    name {Faker::Restaurant.name}
+    description {Faker::Company.profession}
+    location {Faker::Address.full_address}
   end
 end
