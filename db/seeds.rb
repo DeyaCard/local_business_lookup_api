@@ -11,7 +11,7 @@ class Seed
         restaurant: Faker::Restaurant.name
         shop: Faker::Store.name
       )
-      puts "Business #{i}: Restaurant is #{business.restaurant} and business is '#{business.shop}'."
+      puts "Business #{i}: Restaurant is #{business.restaurant} and shop is '#{business.shop}'."
     end
   end
 end

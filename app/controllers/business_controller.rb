@@ -1,8 +1,8 @@
 class BusinessController < ApplicationController
 
   def index
-    @business = {"restaurant": "Departure"}
-    json_response(@business)
+    @businesses = Business.all
+    json_response(@businesses)
   end
 
   def show
