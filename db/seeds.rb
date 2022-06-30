@@ -8,10 +8,11 @@ class Seed
   def generate_businesses
     20.times do |i|
       business = Business.create!(
-        restaurant: Faker::Restaurant.name
-        shop: Faker::Store.name
+        name: Faker::Restaurant.name
+        description: Faker::Company.profession,
+        location: Faker::Address.full_address
       )
-      puts "Business #{i}: Restaurant is #{business.restaurant} and shop is '#{business.shop}'."
+      puts "Business: #{business.name}, description: #{business.description}, location: #{business.location}."
     end
   end
 end

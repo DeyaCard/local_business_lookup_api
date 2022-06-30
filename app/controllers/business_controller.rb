@@ -31,7 +31,7 @@ class BusinessController < ApplicationController
   end
 
   def business_params
-    params.permit(:restaurant, :shop)
+    params.permit(:name, :description, :location, :id)
   end
 end
 
