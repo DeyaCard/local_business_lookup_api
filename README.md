@@ -44,7 +44,7 @@ An API created to search for local restaurants and shops.
 
 
 ## Known Bugs:
-* No known bugs. Please report issues to thedeyacard@gmail.com
+* WORK IN PROGRESS. Please report issues to thedeyacard@gmail.com
 
 
 ## License: 

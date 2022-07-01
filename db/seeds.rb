@@ -9,9 +9,9 @@ class Seed
     20.times do |i|
       business = Business.create!(
         name: Faker::Company.name,
-        description: Faker::Company.buzzword #=> "Customer-focused",
+        description: Faker::Company.buzzword,
         location: Faker::Address.full_address,
-        phone: Faker::PhoneNumber.phone_number #=> "(503)321-4567"
+        phone: Faker::PhoneNumber.phone_number,
       )
       puts "Business: #{business.name}, description: #{business.description}, location: #{business.location}, phone #{business.phone_number}."
     end
