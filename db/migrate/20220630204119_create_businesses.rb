@@ -4,7 +4,7 @@ class CreateBusinesses < ActiveRecord::Migration[5.2]
       t.string :name
       t.string :description
       t.string :location
-      t.string :phone_number
+      t.string :phone
 
       t.timestamps
     end

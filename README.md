@@ -32,15 +32,15 @@ An API created to search for local restaurants and shops.
 
 | Method       | URL | Result |
 | :--- |:---| :---|
-|GET| `localhost:3000/`| Returns a list of all quotes in the database|
-|GET | `localhost:3000/quotes`| Returns a list of all quotes in the database|
-|GET | `localhost:3000/quotes/38`| Returns all information related to quote with ID=38|
-|GET | `http://localhost:3000/quotes/search/?author=Abraham Lincoln`| Returns all quotes in database where author is Abraham Lincoln|
-|GET | `http://localhost:3000/quotes/search/?content=Four score...` | Returns quote with content "Four score..."|
-|GET|`http://localhost:3000/quotes/random`|Returns a random quote from the database|
-|POST|`http://localhost:3000/quotes/?author=Abraham Lincoln&content=Four score...`|Adds quote to database. Author:Abraham Lincoln, Content: "Four score...". If POST is succesfull, returns database object for newly created quote.|
-|PUT/PATCH|`http://localhost:3000/quotes/38?author=Joe Biden`|Updates the author for a quote with ID=38. If PUT/PATCH is succesfull, returns database object for newly updated quote.|
-|DELETE|`http://localhost:3000/quotes/38`|Deletes the quote with ID=38 from database|
+|GET| `localhost:3000/`| Returns a list of all businesses in the database|
+|GET | `localhost:3000/businesses`| Returns a list of all businesses in the database|
+|GET | `localhost:3000/businesses/24`| Returns all information related to business with ID=24|
+|GET | `http://localhost:3000/businesses/search/?restaurant=Olive Garden`| Returns all businesses in database where restaurant is Olive Garden|
+|GET | `http://localhost:3000/businesses/search/?shop=Old Navy` | Returns business with shop "Old Navy"|
+|GET|`http://localhost:3000/businesses/random`|Returns a random restaurant from the database|
+|POST|`http://localhost:3000/businesses/?restaurant=Olive Garden&shop=Old Navy`|Adds business to database. Restaurant:Olive Garden, Shop: "Old Navy". If POST is successful, returns database object for newly created business.|
+|PUT/PATCH|`http://localhost:3000/businesses/24?restaurant=Nobu`|Updates the restaurant for a business with ID=24. If PUT/PATCH is successful, returns database object for newly updated business.|
+|DELETE|`http://localhost:3000/businesses/24`|Deletes the business with ID=24 from database|
 
 
 ## Known Bugs:
