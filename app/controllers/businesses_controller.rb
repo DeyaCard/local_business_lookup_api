@@ -17,12 +17,20 @@ class BusinessesController < ApplicationController
 
   def update
     @business = Business.find(params[:id])
-    @business.update(business_params)
+    if @business.update(business_params)
+      render status: 200, json: {
+        message: "Business updated successfully!"
+      }
+    end
   end
 
   def destroy
     @business = Business.find(params[:id])
-    @business.destroy
+    if @business.destroy
+      render status: 200, json: {
+        message: "Business removed successfully!"
+      }
+    end
   end
 
   private
