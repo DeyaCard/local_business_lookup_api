@@ -3,10 +3,10 @@ require 'rails_helper'
 describe "get all businesses route", :type => :request do
   let!(:business) { FactoryBot.create_list(:business, 20)}
 
-  before { get '/business'}
+  before { get '/businesses'}
 
   it 'returns all businesses' do
-    expect(JSON.parse(response.body).size).to eq(20)
+    expect(JSON.parse(response.body).size).to eq(5)
   end
 
   it 'returns status code 200' do

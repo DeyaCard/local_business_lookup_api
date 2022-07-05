@@ -11,9 +11,9 @@ class Seed
         name: Faker::Company.name,
         description: Faker::Company.buzzword,
         location: Faker::Address.full_address,
-        phone: Faker::PhoneNumber.phone_number,
+        phone: Faker::Base.numerify('(###)###-####')
       )
-      puts "Business: #{business.name}, description: #{business.description}, location: #{business.location}, phone #{business.phone_number}."
+      puts "Business: #{i}: name: #{business.name}, description: #{business.description}, location: #{business.location}, phone #{business.phone}."
     end
   end
 end
