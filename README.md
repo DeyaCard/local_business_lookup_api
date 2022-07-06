@@ -1,6 +1,6 @@
 # Local Business Lookup
 
-An API created to search for local restaurants and shops.
+An API created to search for local restaurants and shops. This API also utilizes pagination to limit search results to 5 per search.
 
 ## By Deya Card
 
@@ -12,7 +12,8 @@ An API created to search for local restaurants and shops.
 * Faker
 * FactoryBot
 * RSpec
-
+* Pagination
+* Postman
 
 
 ## Setup/Installation Requirements:
@@ -28,23 +29,20 @@ An API created to search for local restaurants and shops.
 * In your browser of choice, navigate to localhost:3000
 * Enjoy!
 
+
 ## API Endpoints
 
 | Method       | URL | Result |
 | :--- |:---| :---|
 |GET| `localhost:3000/`| Returns a list of all businesses in the database|
-|GET | `localhost:3000/businesses`| Returns a list of all businesses in the database|
-|GET | `localhost:3000/businesses/24`| Returns all information related to business with ID=24|
-|GET | `http://localhost:3000/businesses/search/?restaurant=Olive Garden`| Returns all businesses in database where restaurant is Olive Garden|
-|GET | `http://localhost:3000/businesses/search/?shop=Old Navy` | Returns business with shop "Old Navy"|
-|GET|`http://localhost:3000/businesses/random`|Returns a random restaurant from the database|
-|POST|`http://localhost:3000/businesses/?restaurant=Olive Garden&shop=Old Navy`|Adds business to database. Restaurant:Olive Garden, Shop: "Old Navy". If POST is successful, returns database object for newly created business.|
-|PUT/PATCH|`http://localhost:3000/businesses/24?restaurant=Nobu`|Updates the restaurant for a business with ID=24. If PUT/PATCH is successful, returns database object for newly updated business.|
-|DELETE|`http://localhost:3000/businesses/24`|Deletes the business with ID=24 from database|
+|GET | `localhost:3000/businesses`| Returns a list of 5 businesses in the database|
+|POST|`http://localhost:3000/businesses/?name=test_restaurant&location=maui&phone=5555555555&description=bestest`|Adds business to database. Name: test_restaurant, location: "Maui", phone: "5555555555", description: "bestest". If POST is successful, returns database object for newly created business.|
+|PUT/PATCH|`http://localhost:3000/businesses/3?name=Nobu`|Updates the name for a business with ID=3. If PUT/PATCH is successful, returns database object for newly updated business.|
+|DELETE|`http://localhost:3000/businesses/[:id]`|Deletes the business with [:id] from database|
 
 
 ## Known Bugs:
-* WORK IN PROGRESS. Please report issues to thedeyacard@gmail.com
+* No known bugs. Please report issues to thedeyacard@gmail.com
 
 
 ## License: 
